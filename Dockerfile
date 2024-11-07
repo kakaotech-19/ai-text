@@ -16,7 +16,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # 애플리케이션 소스 코드를 복사합니다
-COPY app/ ./app
+COPY . .
 
 # 컨테이너 실행 시 기본적으로 실행할 명령을 설정합니다
-CMD ["python3", "app/main.py"]
+CMD ["python3", "main.py"]
